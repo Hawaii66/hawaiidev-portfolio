@@ -1,6 +1,8 @@
 "use client";
 
+import CardCarousell from "@/components/MainProjects/CardCarousell";
 import MainText from "@/components/MainText";
+import RedButton from "@/components/RedButton";
 import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
 
@@ -12,14 +14,12 @@ export default function Home() {
       <div className="w-full relative min-h-screen grid place-items-center">
         <MainText />
         <div className="w-full  absolute bottom-0 pb-16 flex justify-end items-center flex-col">
-          <button
+          <RedButton
+            rotation="down"
             onClick={() =>
               mainProjectsRef.current?.scrollIntoView({ behavior: "smooth" })
             }
-            className="w-12 h-12 rounded-full bg-red-500 grid place-items-center hover:scale-90 active:scale-150 transition-all"
-          >
-            <ChevronDown />
-          </button>
+          />
         </div>
       </div>
       <img src="/wave.svg" className="w-full" />
@@ -33,10 +33,8 @@ export default function Home() {
             backgroundImage: "url(hex.svg)",
           }}
         />
-        <div className="w-1/2">
-          <div className="w-full h-48">
-            <h1>Card</h1>
-          </div>
+        <div className="min-h-screen w-full h-full flex justify-center items-center">
+          <CardCarousell />
         </div>
       </div>
     </div>
