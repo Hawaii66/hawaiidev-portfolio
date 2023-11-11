@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className="dark">{children}</body>
+      <body className="dark " style={{ backgroundColor: "#020817" }}>
+        {children}
+      </body>
     </html>
   );
 }
