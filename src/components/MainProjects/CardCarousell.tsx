@@ -32,7 +32,7 @@ function CardCarousell() {
   return (
     <div className="w-2/3 grid grid-cols-3 gap-8">
       {MainProjects.map((project) => (
-        <Card project={project} />
+        <Card key={project.title} project={project} />
       ))}
     </div>
   );
