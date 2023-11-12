@@ -1,8 +1,8 @@
 "use client";
 
 import { getGraph } from "@/utils/Knowledge/Graph";
+import dynamic from "next/dynamic";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Graph from "react-graph-vis";
 
 const knowledge: {
   nodes: { id: string; group: number; color: string }[];
@@ -209,6 +209,12 @@ const knowledge: {
   ],
 };
 
+const Graph = dynamic(
+  () =>
+    import("@/components/Knowledge/KnowledgeGraph").then((cmp) => cmp.default),
+  { ssr: false }
+);
+
 function KnowledgeMap() {
   /*const ref = useRef<any>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -230,31 +236,12 @@ function KnowledgeMap() {
     });
   }, [wrapperRef]);*/
 
-  const nodes: { id: number; label: string; title: string; color: string }[] =
-    getGraph().nodes.map((i, idx) => ({
-      id: idx,
-      label: i.id,
-      title: i.id,
-      color: i.color,
-    }));
-  const links: { from: number; to: number }[] = getGraph().links.map(
-    (link) => ({
-      from: nodes.find((i) => i.label === link.target)?.id ?? 0,
-      to: nodes.find((i) => i.label === link.source)?.id ?? 0,
-    })
-  );
-
   return (
     <div
       className="2xl:w-2/3 lg:w-2/3 w-11/12 rounded-xl border-white border-2"
       //ref={wrapperRef}
     >
-      <Graph
-        graph={{
-          nodes: nodes,
-          edges: links,
-        }}
-      />
+      <Graph />
     </div>
   );
 }
