@@ -1,5 +1,7 @@
+"use client";
+
 import FixedBackButton from "@/components/FixedBackButton";
-import Category, { CategoryProps } from "@/components/Knowledge/Category";
+import Category from "@/components/Knowledge/Category";
 import ListWrapper from "@/components/Knowledge/ListWrapper";
 import KnowledgeMap from "@/components/Knowledge/Map";
 import { categories } from "@/utils/Knowledge/Graph";
