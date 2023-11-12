@@ -4,7 +4,6 @@ import About from "@/components/About/About";
 import CardCarousell from "@/components/MainProjects/CardCarousell";
 import MainText from "@/components/MainText";
 import RedButton from "@/components/RedButton";
-import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
 
 export default function Home() {
