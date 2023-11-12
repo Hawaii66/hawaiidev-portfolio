@@ -9,11 +9,11 @@ import React, { useState } from "react";
 
 type Props = {
   children: React.ReactNode;
-  configuration: {
-    rowStart: number;
-    rowEnd: number;
-    colStart: number;
-    colEnd: number;
+  className: {
+    xl: HTMLDivElement["className"];
+    md: HTMLDivElement["className"];
+    lg: HTMLDivElement["className"];
+    normal: HTMLDivElement["className"];
   };
   information?: {
     title: string;
@@ -81,8 +81,23 @@ function SlotCenter({ children }: CenterProps) {
   );
 }
 
-function Slot({ children, configuration, information }: Props) {
+const ConfigurationToSize = (
+  className: HTMLDivElement["className"],
+  size: string
+) => {
+  return className
+    .split(" ")
+    .map((c) => `${size}:${c}`)
+    .join(" ");
+};
+
+function Slot({ children, className, information }: Props) {
   const [open, setOpen] = useState(false);
+
+  const fixedXl = ConfigurationToSize(className?.xl || "", "xl");
+  const fixedMd = ConfigurationToSize(className?.md || "", "md");
+  const fixedLg = ConfigurationToSize(className?.lg || "", "lg");
+  const fixedNormal = className?.normal;
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -91,14 +106,12 @@ function Slot({ children, configuration, information }: Props) {
           onMouseLeave={() => setOpen(false)}
           className={cn(
             "bg-white shadow-slot rounded-lg flex flex-col p-4 group-hover:blur-md group-hover:scale-95 hover:blur-none transition-all duration-300",
-            "hover:!scale-110 hover:!blur-none"
+            "hover:!scale-110 hover:!blur-none",
+            fixedXl,
+            fixedLg,
+            fixedMd,
+            fixedNormal
           )}
-          style={{
-            gridColumnStart: configuration.colStart,
-            gridColumnEnd: configuration.colEnd,
-            gridRowStart: configuration.rowStart,
-            gridRowEnd: configuration.rowEnd,
-          }}
         >
           {children}
         </div>

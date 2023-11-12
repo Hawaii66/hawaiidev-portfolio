@@ -1,5 +1,22 @@
+const safeGrids: string[] = [];
+
+const sizeMax = 8;
+const queries = ["md:", "lg:", "xl:", ""];
+
+queries.forEach((query) => {
+  Array.from({ length: sizeMax })
+    .map((_, i) => i)
+    .forEach((length) => {
+      safeGrids.push(`${query}col-start-${length + 1}`);
+      safeGrids.push(`${query}col-end-${length + 1}`);
+      safeGrids.push(`${query}row-start-${length + 1}`);
+      safeGrids.push(`${query}row-end-${length + 1}`);
+    });
+});
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  safelist: safeGrids,
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",

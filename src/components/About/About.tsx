@@ -9,13 +9,13 @@ function About() {
       <AboutHeader />
       <div className="w-full flex flex-col justify-center items-center">
         <div className="w-full flex justify-center items-center">
-          <div className="grid grid-cols-5 grid-rows-5 gap-8 w-2/3 aspect-video m-4 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 w-2/3 aspect-video m-4 group">
             <Slot
-              configuration={{
-                colStart: 1,
-                colEnd: 3,
-                rowStart: 1,
-                rowEnd: 3,
+              className={{
+                lg: "col-start-1 col-end-3 row-start-1 row-end-1",
+                md: "col-start-1 col-end-3 row-start-1 row-end-1",
+                normal: "",
+                xl: "col-start-1 col-end-3 row-start-1 row-end-3",
               }}
               information={{
                 title: "Meriter",
@@ -82,11 +82,11 @@ function About() {
               </Slot.List>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 3,
-                colEnd: 3,
-                rowStart: 1,
-                rowEnd: 1,
+              className={{
+                lg: "",
+                xl: "col-start-3 col-end-3 row-start-1 row-end-1",
+                md: "",
+                normal: "",
               }}
               information={{
                 title: "Favorit ämne",
@@ -101,31 +101,31 @@ function About() {
               </div>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 4,
-                colEnd: 4,
-                rowStart: 1,
-                rowEnd: 1,
+              className={{
+                lg: "col-start-3 col-end-4 row-start-3 row-end-4",
+                xl: "col-start-4 col-end-4 row-start-1 row-end-1",
+                md: "",
+                normal: "",
               }}
               information={{
                 title: "Nyköping",
                 content: <p>Bor i Nyköping med familj</p>,
               }}
             >
-              <div className="overflow-hidden w-full h-full">
+              <Slot.Center>
                 <Slot.Image
                   rounded
                   fullHeight
                   url="https://www.sj.se/content/dam/externt/bilder/natur-landskap/vyoverhamnenotorgetinykoping-2019.jpg/_jcr_content/renditions/cq5dam.web.590.y.jpg"
                 />
-              </div>
+              </Slot.Center>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 5,
-                colEnd: 5,
-                rowStart: 1,
-                rowEnd: 1,
+              className={{
+                lg: "",
+                xl: "col-start-5 col-end-5 row-start-1 row-end-1",
+                md: "",
+                normal: "",
               }}
               information={{
                 title: "Språk",
@@ -158,11 +158,11 @@ function About() {
               </Slot.List>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 3,
-                colEnd: 5,
-                rowStart: 2,
-                rowEnd: 5,
+              className={{
+                lg: "col-start-1 col-end-3 row-start-2 row-end-4",
+                xl: "col-start-3 col-end-5 row-start-2 row-end-5",
+                md: "col-start-1 col-end-3 row-start-3 row-end-3",
+                normal: "",
               }}
               information={{
                 title: "Segling",
@@ -178,11 +178,11 @@ function About() {
               <Sailboat size="100%" color="black" />
             </Slot>
             <Slot
-              configuration={{
-                colStart: 5,
-                colEnd: 5,
-                rowStart: 4,
-                rowEnd: 4,
+              className={{
+                lg: "",
+                xl: "col-start-5 col-end-5 row-start-4 row-end-4",
+                md: "col-start-2 col-end-3 row-start-4 row-end-6",
+                normal: "",
               }}
               information={{
                 title: "Favoriter",
@@ -201,11 +201,11 @@ function About() {
               <IceCream size="100%" color="black" />
             </Slot>
             <Slot
-              configuration={{
-                colStart: 5,
-                colEnd: 5,
-                rowStart: 2,
-                rowEnd: 4,
+              className={{
+                lg: "col-start-1 col-end-2 row-start-4 row-end-7",
+                xl: "col-start-5 col-end-5 row-start-2 row-end-4",
+                md: "",
+                normal: "",
               }}
               information={{
                 title: "3D Printer",
@@ -224,11 +224,11 @@ function About() {
               </Slot.Center>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 3,
-                colEnd: 6,
-                rowStart: 5,
-                rowEnd: 5,
+              className={{
+                lg: "col-start-2 col-end-4 row-start-6 row-end-6",
+                xl: "col-start-3 col-end-6 row-start-5 row-end-5",
+                md: "col-start-1 col-end-3 row-start-7 row-end-7",
+                normal: "",
               }}
               information={{
                 title: "Bill Gates",
@@ -245,11 +245,11 @@ function About() {
               </Slot.Center>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 1,
-                colEnd: 2,
-                rowStart: 3,
-                rowEnd: 6,
+              className={{
+                lg: "col-start-3 col-end-4 row-start-4 row-end-6",
+                xl: "col-start-1 col-end-2 row-start-3 row-end-6",
+                md: "",
+                normal: "",
               }}
               information={{
                 title: "Rymden",
@@ -264,11 +264,11 @@ function About() {
               </Slot.Center>
             </Slot>
             <Slot
-              configuration={{
-                colStart: 2,
-                colEnd: 3,
-                rowStart: 3,
-                rowEnd: 6,
+              className={{
+                lg: "col-start-2 col-end-3 row-start-4 row-end-6",
+                xl: "col-start-2 col-end-3 row-start-3 row-end-6",
+                md: "",
+                normal: "",
               }}
               information={{
                 title: "Anis Don Demina",
