@@ -23,11 +23,11 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://hawaiidev-portfolio.vercel.app/og/homepage"
+          content="https://hawaiidev-portfolio.vercel.app/image.png"
         />
         <meta
           property="twitter:image"
-          content="https://hawaiidev-portfolio.vercel.app/og/homepage"
+          content="https://hawaiidev-portfolio.vercel.app/image.png"
         ></meta>
         <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
@@ -45,7 +45,7 @@ export default function RootLayout({
         />
         <meta
           property="og:url"
-          content="https://hawaiidev-portfolio.vercel.app/og/homepage"
+          content="https://hawaiidev-portfolio.vercel.app/image.png"
         />
       </head>
       <body className="dark " style={{ backgroundColor: "#020817" }}>
