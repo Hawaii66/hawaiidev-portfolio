@@ -12,7 +12,7 @@ export const EnskildaKiller: Project = {
     },
     {
       description:
-        "My school has a game each autumn called 'Killer' everyone at school gets assigned another person on school as their 'target' which they have to 'kill'. This websites shows each persons target, who and when they killed each person and which circle they currently are assigned to. You can also read up on the rules and concepts of the game. The statistics are updated automaticly once a 'kill' is confirmed by both murderer and target",
+        "My school has a game each autumn called `Killer` everyone at school gets assigned another person on school as their `target` which they have to `kill`. This websites shows each persons target, who and when they killed each person and which circle they currently are assigned to. You can also read up on the rules and concepts of the game. The statistics are updated automaticly once a `kill` is confirmed by both murderer and target",
     },
     {
       header: "Admin",
@@ -20,7 +20,7 @@ export const EnskildaKiller: Project = {
     {
       imageSide: "left",
       description:
-        "The admin page can only be viewed by a select few people. From here they can se and edit each user and also manually murder people, move players, kill players. The rules and concepts can also be edited from here. If two users disagree they can issue a litigation which will appear here for admins to resolve, and a notice on teams is sent out. Via the settings they can manage the 'game state' and general settings.",
+        "The admin page can only be viewed by a select few people. From here they can se and edit each user and also manually murder people, move players, kill players. The rules and concepts can also be edited from here. If two users disagree they can issue a litigation which will appear here for admins to resolve, and a notice on teams is sent out. Via the settings they can manage the `game state` and general settings.",
       url: "/enskildakiller/admin.png",
     },
     {
@@ -29,7 +29,7 @@ export const EnskildaKiller: Project = {
     {
       imageSide: "right",
       description:
-        "This is the page all users visist. Here they can see their personal information (name,class,...) but most importantly who they are suppose to murder. They also have the possibility to see their previous kills and issue litigations. By pressing the buttons 'I died' or 'I have murdered' and their 'target/murderer' doing the same the kill is automaticly detected and processed and their new target appears.",
+        "This is the page all users visist. Here they can see their personal information (name,class,...) but most importantly who they are suppose to murder. They also have the possibility to see their previous kills and issue litigations. By pressing the buttons `I died` or `I have murdered` and their `target/murderer` doing the same the kill is automaticly detected and processed and their new target appears.",
       url: "/enskildakiller/profile.png",
     },
     {
