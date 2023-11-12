@@ -11,6 +11,7 @@ const MainProjects: CardProps[] = [
     image: "/enskildakiller/main.png",
     stack: ["NextJS", "Supabase", "Clerk", "TailwindCSS"],
     link: "/projects/enskildakiller",
+    hasLink: true,
   },
   {
     title: "Åkroken",
@@ -19,6 +20,7 @@ const MainProjects: CardProps[] = [
     image: "/akroken/main.webp",
     stack: ["Unity", "Artist"],
     link: "/projects/akroken",
+    hasLink: true,
   },
   {
     title: "Portfölj",
@@ -27,6 +29,7 @@ const MainProjects: CardProps[] = [
     image: "/portfolio/main.png",
     stack: ["NextJS", "TailwindCSS"],
     link: "/projects/portfolio",
+    hasLink: true,
   },
 ];
 
