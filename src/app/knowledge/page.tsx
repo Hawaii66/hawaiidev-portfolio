@@ -38,7 +38,7 @@ function Page() {
               ))}
             </ul>
             <p className="w-full text-right align-bottom text-white font-mono">
-              Några av de saker jag kan
+              Some of the things I know
             </p>
           </div>
         </ListWrapperLazy>

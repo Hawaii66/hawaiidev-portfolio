@@ -3,6 +3,7 @@ import NotFoundRenderer from "@/components/NotFound";
 import Project from "@/components/Projects/Sections/Project";
 import { Akroken } from "@/utils/Projects/Akroken";
 import { EnskildaKiller } from "@/utils/Projects/Enskildakiller";
+import { Portfolio } from "@/utils/Projects/Portfolio";
 import React from "react";
 
 function Page({ params }: { params: { name: string } }) {
@@ -12,6 +13,8 @@ function Page({ params }: { params: { name: string } }) {
         return <Project project={EnskildaKiller} />;
       case "akroken":
         return <Project project={Akroken} />;
+      case "portfolio":
+        return <Project project={Portfolio} />;
     }
   };
 

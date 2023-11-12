@@ -3,12 +3,6 @@
 import { TextModifyBuilder } from "@/utils/ModifyText";
 import React, { useEffect, useState } from "react";
 
-const jokes = [
-  "404: Sleep not found",
-  "Oh, it was a typo",
-  "Always Dark Mode",
-  "In Ctrl + S we trust",
-];
 function MainText() {
   const [header, setHeader] = useState("Hello World!");
   const [handle, setHandle] = useState("");
@@ -19,20 +13,15 @@ function MainText() {
   };
   const animateInfo = async () => {
     await new TextModifyBuilder(setInfo)
-      .WriteText("Nyköping")
-      .Sleep(500)
-      .AppendText(" 18 år")
+      .WriteText("Nyköping Sweden", { delay: 100 })
+      .AppendText(" 18 years", { delay: 50 })
       .Animate();
   };
 
   const animateHeader = async () => {
-    const joke = jokes[Math.floor(Math.random() * jokes.length)];
     await new TextModifyBuilder(setHeader)
       .Sleep(500)
       .DeleteText("Hello World")
-      .Sleep(200)
-      .WriteText(joke, { delay: 25 })
-      .Sleep(500)
       .Action(animateHandle)
       .Sleep(500)
       .DeletePrevious({ delay: 50 })
