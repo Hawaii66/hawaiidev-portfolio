@@ -6,7 +6,7 @@ function AboutHeader() {
       <h1 className="text-lg font-sans text-white font-bold">
         Sebastian Ahlman
       </h1>
-      <h2>18 år Nyköping</h2>
+      <h2>18 years Sweden Nyköping</h2>
     </div>
   );
 }

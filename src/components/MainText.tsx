@@ -13,9 +13,8 @@ function MainText() {
   };
   const animateInfo = async () => {
     await new TextModifyBuilder(setInfo)
-      .WriteText("Nyköping")
-      .Sleep(500)
-      .AppendText(" 18 år")
+      .WriteText("Nyköping Sweden", { delay: 100 })
+      .AppendText(" 18 years", { delay: 50 })
       .Animate();
   };
 

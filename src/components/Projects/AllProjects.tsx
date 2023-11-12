@@ -6,7 +6,7 @@ import FixedBackButton from "../FixedBackButton";
 const projects: CardProps[] = [
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "Developed a website for my school using NextJS and Supabase. Each user can log in using Clerk and se their 'target'. Admins can log in and se the whole circle",
     image: "/enskildakiller/main.png",
     link: "/projects/enskildakiller",
     stack: ["NextJS", "Supabase", "Clerk", "TailwindCSS"],
@@ -15,7 +15,7 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "One of projects I worked on at LearningWell where I developed an AR app togehter with a 3D artist to bring a famous historical place in Nyköping to life",
     image: "/akroken/main.webp",
     link: "/projects/akroken",
     stack: ["Unity", "Artist"],
@@ -24,7 +24,7 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "The portfolio you are currenly watching, development time: 2 days. I wanted to summarize some of the things I have worked on in one place",
     image: "/portfolio/main.png",
     link: "/projects/portfolio",
     stack: ["NextJS", "TailwindCSS"],
@@ -33,7 +33,7 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "A larger project spanning years. The idea is to build a machine with Arduino, RaspberryPI and NextJS to purchase candy from a website and be delivered by a robot",
     image: "/vendingmachine/main.jpg",
     link: "/projects/vendingmachine",
     stack: ["NextJS", "Arduino", "RaspberryPI", "Stripe"],
@@ -42,7 +42,7 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "A website for sharing and studying all things related to school. The website will integrated with AI and have interactive playgrounds for learning.",
     image: "/lessonlagoon/main.png",
     link: "/projects/lessonlagoon",
     stack: ["NextJS", "ChatGPT", "Clerk", "Supabase"],
@@ -51,7 +51,7 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "A SASS for generating AppStore image gallerys with images spanning multiple images. In early stages of development",
     image: "/fusethis/main.webp",
     link: "/projects/fusethis",
     stack: ["NextJS"],
@@ -60,7 +60,7 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "I got tired of using my schools default time table renderer, so I buildt my own. Will build out the website with more things I'm frustrated with",
     image: "/schoolsoftpro/main.png",
     link: "/projects/schoolsoftpro",
     stack: ["NextJS", "HTML-parser"],
@@ -69,10 +69,10 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
+      "Learned Rust and the discrete Verlet simulation for simulating balls in the Bevy 2D framework",
     image: "/verletsimulation/main.png",
     link: "/projects/verletsimulation",
-    stack: ["Rust"],
+    stack: ["Rust", "Bevy", "Discret Verlet Simulation"],
     title: "Verlet Simulation",
     github: "https://github.com/Hawaii66/Verlet-Simulation",
   },

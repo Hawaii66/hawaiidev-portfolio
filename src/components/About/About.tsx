@@ -2,6 +2,13 @@ import { FunctionSquare, IceCream, Pi, Sailboat, Tangent } from "lucide-react";
 import React from "react";
 import Slot from "./Slot";
 import AboutHeader from "./AboutHeader";
+import GithubGraph from "./GithubGraph";
+import dynamic from "next/dynamic";
+
+const GithubLazy = dynamic(
+  () => import("@/components/About/GithubGraph").then((cmp) => cmp.default),
+  { ssr: false }
+);
 
 function About() {
   return (
@@ -18,66 +25,66 @@ function About() {
                 xl: "col-start-1 col-end-3 row-start-1 row-end-3",
               }}
               information={{
-                title: "Meriter",
+                title: "Merits",
                 content: (
                   <ul>
                     <li>
-                      <b>Körkort:</b> AM & B körkort
+                      <b>Driver's License:</b> B & AM driver's license
                     </li>
                     <li>
-                      <b>Drönare:</b> Får flyga drönare upp till 25kg
+                      <b>Drone:</b> Allowed to fly drones up to 25kg
                     </li>
                     <li>
-                      <b>Förarbevis: </b>Utbildad båtförare
+                      <b>Boat License:</b> Trained boat operator
                     </li>
                     <li>
-                      <b>Naturvetenskap: </b>Pluggar nu naturvetenskap vid
-                      Nyköpings Enskilda Gymnasium
+                      <b>Natural Sciences:</b> Currently studying natural
+                      sciences at Nyköpings Enskilda Gymnasium
                     </li>
                     <li>
-                      <b>Tränare grön: </b>Utbildad seglings tränare för vuxna
-                      och barn
+                      <b>Sailing Green Coach:</b> Trained sailing coach for
+                      adults and children
                     </li>
                   </ul>
                 ),
               }}
             >
-              <Slot.Header text="Meriter" />
+              <Slot.Header text="Merits" />
               <Slot.List>
                 <li className="flex flex-row gap-4">
                   <Slot.Image
                     url="https://cdn-icons-png.flaticon.com/128/3012/3012075.png"
                     height="h-8"
                   />
-                  <Slot.Text text="- Körkort (AM & B)" />
+                  <Slot.Text text="- Drivers License (B & AM)" />
                 </li>
                 <li className="flex flex-row gap-4">
                   <Slot.Image
                     url="https://cdn-icons-png.flaticon.com/512/1830/1830867.png"
                     height="h-8"
                   />
-                  <Slot.Text text="- Drönar Pilot & Drönar Operatör" />
+                  <Slot.Text text="- Drone pilot and operator" />
                 </li>
                 <li className="flex flex-row gap-4">
                   <Slot.Image
                     url="https://cdn-icons-png.flaticon.com/512/4726/4726403.png"
                     height="h-8"
                   />
-                  <Slot.Text text="- Förarbevis båt" />
+                  <Slot.Text text="- Boat license" />
                 </li>
                 <li className="flex flex-row gap-4">
                   <Slot.Image
                     url="https://cdn-icons-png.flaticon.com/128/2497/2497631.png"
                     height="h-8"
                   />
-                  <Slot.Text text="- Naturvetenskap (gymnasium)" />
+                  <Slot.Text text="- Natural Science (gymnasium)" />
                 </li>
                 <li className="flex flex-row gap-4">
                   <Slot.Image
                     url="https://cdn-icons-png.flaticon.com/128/852/852104.png"
                     height="h-8"
                   />
-                  <Slot.Text text="- Tränare grön (segling)" />
+                  <Slot.Text text="- Sailing coach (green)" />
                 </li>
               </Slot.List>
             </Slot>
@@ -89,11 +96,11 @@ function About() {
                 normal: "",
               }}
               information={{
-                title: "Favorit ämne",
-                content: <p>Favorit ämne i skolan är matematik</p>,
+                title: "Favorite Subject",
+                content: <p>Favorite subject in school is mathematics</p>,
               }}
             >
-              <Slot.Header text="Ämne: Matematik" />
+              <Slot.Header text="Subject: Mathematics" />
               <div className="flex flex-row gap-2">
                 <Pi size="100%" color="black" />
                 <FunctionSquare size="100%" color="black" />
@@ -109,7 +116,7 @@ function About() {
               }}
               information={{
                 title: "Nyköping",
-                content: <p>Bor i Nyköping med familj</p>,
+                content: <p>Lives in Nyköping Sweden with my family</p>,
               }}
             >
               <Slot.Center>
@@ -128,32 +135,32 @@ function About() {
                 normal: "",
               }}
               information={{
-                title: "Språk",
+                title: "Languages",
                 content: (
                   <ul>
                     <li>
-                      <b>Svenska: </b>Talar flytande svenska
+                      <b>Swedish: </b>Fluent
                     </li>
                     <li>
-                      <b>Engelska: </b>Talar flytande engelska
+                      <b>English: </b>Fluent
                     </li>
                     <li>
-                      <b>Spanska: </b>Talar spanska, högsta kurs Spanska 3
+                      <b>Spanish: </b>Moderate (Spanish 3)
                     </li>
                   </ul>
                 ),
               }}
             >
-              <Slot.Header text="Språk" />
+              <Slot.Header text="Languages" />
               <Slot.List className="grid grid-cols-2 gap-1">
                 <li>
-                  <Slot.Text text="Svenska" />
+                  <Slot.Text text="Swedish" />
                 </li>
                 <li>
-                  <Slot.Text text="Engelska" />
+                  <Slot.Text text="English" />
                 </li>
                 <li>
-                  <Slot.Text text="Spanska" />
+                  <Slot.Text text="Spanish" />
                 </li>
               </Slot.List>
             </Slot>
@@ -165,17 +172,25 @@ function About() {
                 normal: "",
               }}
               information={{
-                title: "Segling",
+                title: "Code",
                 content: (
                   <p>
-                    Har seglat i flera år i seglingsklubben NYSS och är idag
-                    tränare där tillsammans med 3 andra tränare. Tillsammans har
-                    vi måndagssegling och sommarlägren för barnen.
+                    My commit graph from Github with the code snippet generating
+                    the writing text above uses method chaining and the builder
+                    pattern. Each function returns a reference to the
+                    TextModifyBuilder which stores state which is needed for the
+                    DeletePrevious, the actions are break points which are used
+                    for starting other animations
                   </p>
                 ),
               }}
             >
-              <Sailboat size="100%" color="black" />
+              <GithubLazy />
+              <div className="w-full flex justify-between items-center flex-grow">
+                <div className="w-full flex flex-row justify-between items-center">
+                  <Slot.Image url="/code.png" />
+                </div>
+              </div>
             </Slot>
             <Slot
               className={{
@@ -185,20 +200,18 @@ function About() {
                 normal: "",
               }}
               information={{
-                title: "Favoriter",
+                title: "Sailing",
                 content: (
-                  <ul>
-                    <li>
-                      <b>Mat: </b>Sushi
-                    </li>
-                    <li>
-                      <b>Dessert: </b>Glass
-                    </li>
-                  </ul>
+                  <p>
+                    I have sailed for multiple years in my local sailing club
+                    NYSS and today I'm one of 4 instructors instructing over 20
+                    kids between 8-14 years. We have trainings each week and
+                    summer camps.
+                  </p>
                 ),
               }}
             >
-              <IceCream size="100%" color="black" />
+              <Sailboat size="100%" color="black" />
             </Slot>
             <Slot
               className={{
@@ -211,8 +224,8 @@ function About() {
                 title: "3D Printer",
                 content: (
                   <p>
-                    Har en Ender 3 Pro hemma som jag bland annat använt för att
-                    driva UF företaget Simplito UF tillsammans med 3 kompisar
+                    I have an Ender 3 Pro at home that I use for, among other
+                    things my UF business Simplito UF together with 3 friends.
                   </p>
                 ),
               }}
@@ -233,7 +246,7 @@ function About() {
               information={{
                 title: "Bill Gates",
                 content:
-                  "Jag gillar att söka efter nya och snabbare sätt att göra saker på för att jobba mera effektivt",
+                  "I like to find new ways to do old things that are quicker and easier, you can call me lazy",
               }}
             >
               <Slot.Center>
@@ -253,7 +266,7 @@ function About() {
               }}
               information={{
                 title: "Humor",
-                content: <p>10 i binära talsystemet är 2</p>,
+                content: <p>10 in binary is 2</p>,
               }}
             >
               <Slot.Center>
@@ -274,7 +287,9 @@ function About() {
                 title: "Anis Don Demina",
                 content: (
                   <>
-                    <p>- Ironiskt hur man offrar sömn för att jaga drömmar</p>
+                    <p>
+                      - Ironic how you sacrifice sleep to chase your dreams{" "}
+                    </p>
                     <p>Underbarn</p>
                   </>
                 ),
@@ -290,7 +305,7 @@ function About() {
           </div>
         </div>
         <p className="w-2/3 text-right font-mono text-white text-md">
-          Klicka på en ruta för mer information
+          Click on a square for more information
         </p>
       </div>
     </div>
