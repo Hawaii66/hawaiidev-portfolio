@@ -23,6 +23,20 @@ export default function Home() {
             }
           />
         </div>
+        <div className="absolute top-4 right-4 z-50 gap-4 flex flex-col">
+          <RedButton
+            outline
+            text="Projects"
+            link="/projects"
+            rotation="right"
+          />
+          <RedButton
+            outline
+            text="Knowledge"
+            link="/knowledge"
+            rotation="right"
+          />
+        </div>
       </div>
       <img src="/wave.svg" className="w-full" />
       <div className="min-h-screen w-full relative" ref={mainProjectsRef}>

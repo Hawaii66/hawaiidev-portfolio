@@ -7,6 +7,7 @@ type Props = {
   onClick?: () => void;
   link?: string;
   text?: string;
+  outline?: boolean;
 };
 
 const RotationToDeg = (rotation: Props["rotation"]) => {
@@ -34,7 +35,9 @@ function RedButton(props: Props) {
           props.text
             ? "rounded-md px-4 flex flex-row gap-4 justify-between items-center"
             : "rounded-full w-12 grid place-items-center"
-        }  bg-red-500 hover:scale-90 active:scale-150 transition-all`}
+        }  ${
+          props.outline ? "border-white border-2" : "bg-red-500"
+        } hover:scale-90 active:scale-150 transition-all`}
       >
         <ChevronRight
           color="white"
