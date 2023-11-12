@@ -16,6 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
+      </head>
       <body className="dark " style={{ backgroundColor: "#020817" }}>
         {children}
         <Footer />

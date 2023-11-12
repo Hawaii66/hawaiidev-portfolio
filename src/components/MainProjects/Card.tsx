@@ -1,3 +1,6 @@
+"use client";
+
+import { StackToIcons } from "@/utils/Stack";
 import RedButton from "../RedButton";
 import Tilt from "react-parallax-tilt";
 
@@ -44,7 +47,9 @@ function Card({
         </div>
         <div>
           <p>Stack:</p>
-          <p className="text-slate-800">{stack.join(", ")}</p>
+          <div className="flex flex-row flex-wrap pr-12 gap-4">
+            {StackToIcons(stack).map((i) => i)}
+          </div>
         </div>
       </Tilt>
     </div>
