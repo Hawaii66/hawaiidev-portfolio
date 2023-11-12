@@ -9,7 +9,7 @@ const MainProjects: CardProps[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
     image: "/enskildakiller/main.png",
-    stack: ["NextJS", "Supabase", "Clerk"],
+    stack: ["NextJS", "Supabase", "Clerk", "TailwindCSS"],
     link: "/projects/enskildakiller",
   },
   {
@@ -25,7 +25,7 @@ const MainProjects: CardProps[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
     image: "/portfolio/main.png",
-    stack: ["NextJS"],
+    stack: ["NextJS", "TailwindCSS"],
     link: "/projects/portfolio",
   },
 ];
@@ -36,7 +36,7 @@ function CardCarousell() {
       <h2 className="text-3xl text-white text-center font-bold font-mono">
         Största Projekt
       </h2>
-      <div className="w-2/3 grid grid-cols-3 gap-8">
+      <div className="w-2/3 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-8">
         {MainProjects.map((project) => (
           <Card key={project.title} project={project} />
         ))}
