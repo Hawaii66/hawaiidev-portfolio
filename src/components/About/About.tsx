@@ -252,14 +252,14 @@ function About() {
                 normal: "",
               }}
               information={{
-                title: "Rymden",
-                content: <p>En tavla jag har på rummet</p>,
+                title: "Humor",
+                content: <p>10 i binära talsystemet är 2</p>,
               }}
             >
               <Slot.Center>
                 <Slot.Image
                   rounded
-                  url="https://static.displate.com/857x1200/displate/2021-01-02/4236b8017dc974f79d27fdd0f6d73dfd_593012348c68d1696c025014370635da.jpg"
+                  url="https://static.displate.com/280x392/displate/2023-04-12/9c3bd69020c2f15fe97d32a3f5132973_37d9051efbbd6042daafd8cbcdcb6667.jpg"
                 />
               </Slot.Center>
             </Slot>
