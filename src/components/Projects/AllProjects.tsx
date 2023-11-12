@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectHeader from "./ProjectHeader";
 import Card, { CardProps } from "../MainProjects/Card";
+import FixedBackButton from "../FixedBackButton";
 
 const projects: CardProps[] = [
   {
@@ -10,6 +11,7 @@ const projects: CardProps[] = [
     link: "/projects/enskildakiller",
     stack: ["NextJS", "Supabase", "Clerk", "TailwindCSS"],
     title: "Enskilda Killer",
+    hasLink: true,
   },
   {
     description:
@@ -18,6 +20,7 @@ const projects: CardProps[] = [
     link: "/projects/akroken",
     stack: ["Unity", "Artist"],
     title: "Åkroken",
+    hasLink: true,
   },
   {
     description:
@@ -26,6 +29,7 @@ const projects: CardProps[] = [
     link: "/projects/portfolio",
     stack: ["NextJS", "TailwindCSS"],
     title: "Portfölj",
+    hasLink: true,
   },
   {
     description:
@@ -34,6 +38,7 @@ const projects: CardProps[] = [
     link: "/projects/vendingmachine",
     stack: ["NextJS", "Arduino", "RaspberryPI", "Stripe"],
     title: "Vending Machine",
+    github: "https://github.com/Hawaii66/VendingMachineV2",
   },
   {
     description:
@@ -42,6 +47,7 @@ const projects: CardProps[] = [
     link: "/projects/lessonlagoon",
     stack: ["NextJS", "ChatGPT", "Clerk", "Supabase"],
     title: "Lesson Lagoon",
+    github: "https://github.com/Hawaii66/lesson-lagoon",
   },
   {
     description:
@@ -50,6 +56,7 @@ const projects: CardProps[] = [
     link: "/projects/fusethis",
     stack: ["NextJS"],
     title: "Fuse This",
+    github: "https://github.com/Hawaii66/fuse-this",
   },
   {
     description:
@@ -58,6 +65,7 @@ const projects: CardProps[] = [
     link: "/projects/schoolsoftpro",
     stack: ["NextJS", "HTML-parser"],
     title: "Schoolsoft PRO",
+    github: "https://github.com/Hawaii66/schoolsoft-pro",
   },
   {
     description:
@@ -66,12 +74,14 @@ const projects: CardProps[] = [
     link: "/projects/verletsimulation",
     stack: ["Rust"],
     title: "Verlet Simulation",
+    github: "https://github.com/Hawaii66/Verlet-Simulation",
   },
 ];
 
 function AllProjects() {
   return (
     <div className="pt-12 flex flex-col justify-center items-center gap-8">
+      <FixedBackButton link="/" />
       <ProjectHeader />
       <div className="w-2/3 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-8">
         {projects.map((project) => (

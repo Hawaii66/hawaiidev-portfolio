@@ -3,6 +3,7 @@
 import { StackToIcons } from "@/utils/Stack";
 import RedButton from "../RedButton";
 import Tilt from "react-parallax-tilt";
+import Link from "next/link";
 
 export type CardProps = {
   title: string;
@@ -10,10 +11,12 @@ export type CardProps = {
   description: string;
   stack: string[];
   link: string;
+  hasLink?: boolean;
+  github?: string;
 };
 
 function Card({
-  project: { description, image, title, stack, link },
+  project: { description, image, title, stack, link, hasLink, github },
 }: {
   project: CardProps;
 }) {
@@ -44,9 +47,19 @@ function Card({
             className="w-full rounded-2xl aspect-video object-contain"
           />
           <p className="text-md text-slate-800">- {description}</p>
-          <div className="absolute z-50 bottom-4 right-4">
-            <RedButton rotation="right" link={link} />
-          </div>
+          {hasLink && (
+            <div className="absolute z-50 bottom-4 right-4">
+              <RedButton rotation="right" link={link} />
+            </div>
+          )}
+          {github && (
+            <div>
+              <p className="font-bold">Github:</p>
+              <Link href={github} target="_blank" className="text-blue-500">
+                {github}
+              </Link>
+            </div>
+          )}
         </div>
         <div>
           <p className="font-bold">Stack:</p>
