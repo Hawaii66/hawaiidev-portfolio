@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/About/About";
 import CardCarousell from "@/components/MainProjects/CardCarousell";
 import MainText from "@/components/MainText";
 import RedButton from "@/components/RedButton";
@@ -8,6 +9,7 @@ import { useRef } from "react";
 
 export default function Home() {
   const mainProjectsRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="w-full">
@@ -23,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <img src="/wave.svg" className="w-full" />
-      <div className="min-h-screen w-full " ref={mainProjectsRef}>
+      <div className="min-h-screen w-full relative" ref={mainProjectsRef}>
         <div
           className="w-full -z-10 h-full absolute"
           style={{
@@ -36,6 +38,18 @@ export default function Home() {
         <div className="min-h-screen w-full h-full flex justify-center items-center">
           <CardCarousell />
         </div>
+        <div className="w-full absolute bottom-0 pb-16 flex justify-end items-center flex-col">
+          <RedButton
+            rotation="down"
+            onClick={() =>
+              aboutRef.current?.scrollIntoView({ behavior: "smooth" })
+            }
+          />
+        </div>
+      </div>
+      <img src="/wave.svg" className="w-full" />
+      <div className="min-h-screen w-full" ref={aboutRef}>
+        <About />
       </div>
     </div>
   );

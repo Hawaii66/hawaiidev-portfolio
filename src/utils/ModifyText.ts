@@ -93,8 +93,6 @@ export class TextModifyBuilder {
       if (typeof result === "string") {
         text = result;
       }
-
-      console.log(text);
     }
   };
 }
