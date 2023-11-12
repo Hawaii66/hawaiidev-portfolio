@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Sebastian Ahlman",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="dark " style={{ backgroundColor: "#020817" }}>
         {children}
+        <Footer />
       </body>
     </html>
   );
