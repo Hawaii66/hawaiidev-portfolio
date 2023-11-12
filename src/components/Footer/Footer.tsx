@@ -27,7 +27,7 @@ function Footer() {
         </h2>
         <div className="flex flex-row justify-between gap-8">
           {contactMethods.map((method) => (
-            <ContactMethod method={method} />
+            <ContactMethod key={method.header} method={method} />
           ))}
         </div>
       </div>
