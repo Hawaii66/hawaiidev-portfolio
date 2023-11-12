@@ -4,7 +4,6 @@ import About from "@/components/About/About";
 import CardCarousell from "@/components/MainProjects/CardCarousell";
 import MainText from "@/components/MainText";
 import RedButton from "@/components/RedButton";
-import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
 
 export default function Home() {
@@ -21,6 +20,20 @@ export default function Home() {
             onClick={() =>
               mainProjectsRef.current?.scrollIntoView({ behavior: "smooth" })
             }
+          />
+        </div>
+        <div className="absolute top-4 right-4 z-50 gap-4 flex flex-col">
+          <RedButton
+            outline
+            text="Projects"
+            link="/projects"
+            rotation="right"
+          />
+          <RedButton
+            outline
+            text="Knowledge"
+            link="/knowledge"
+            rotation="right"
           />
         </div>
       </div>

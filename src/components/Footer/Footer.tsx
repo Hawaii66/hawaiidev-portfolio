@@ -11,7 +11,7 @@ const contactMethods: ContactMethodProps[] = [
     text: "hawaiilive@outlook.com",
   },
   {
-    header: "Telefon",
+    header: "Phone",
     method: "tel",
     icon: <Phone />,
     text: "+46705453110",
@@ -23,7 +23,7 @@ function Footer() {
     <div className="h-24 w-full flex justify-center items-center text-white">
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold text-white font-sans text-center">
-          Kontakt
+          Contact
         </h2>
         <div className="flex flex-row justify-between gap-8">
           {contactMethods.map((method) => (
