@@ -14,7 +14,9 @@ function Category({ techs, title, color }: CategoryProps) {
       </h2>
       <div>
         {techs.map((tech) => (
-          <li className="text-lg font-mono pl-4">- {tech}</li>
+          <li key={tech} className="text-lg font-mono pl-4">
+            - {tech}
+          </li>
         ))}
       </div>
     </div>

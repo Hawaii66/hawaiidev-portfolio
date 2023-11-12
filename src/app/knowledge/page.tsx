@@ -17,7 +17,12 @@ function Page() {
             </h1>
             <ul className="flex flex-row flex-grow justify-start items-start flex-wrap gap-8">
               {categories.map((i) => (
-                <Category color={i.color} techs={i.techs} title={i.title} />
+                <Category
+                  key={i.title}
+                  color={i.color}
+                  techs={i.techs}
+                  title={i.title}
+                />
               ))}
             </ul>
             <p className="w-full text-right align-bottom text-white font-mono">
