@@ -105,8 +105,8 @@ function Slot({ children, className, information }: Props) {
         <div
           onMouseLeave={() => setOpen(false)}
           className={cn(
-            "bg-white shadow-slot rounded-lg flex flex-col p-4 group-hover:blur-md group-hover:scale-95 hover:blur-none transition-all duration-300",
-            "hover:!scale-110 hover:!blur-none",
+            "bg-white shadow-slot rounded-lg flex flex-col p-4 group-hover:brightness-90 group-hover:scale-95 hover:blur-none transition-all duration-300",
+            "hover:!scale-110 hover:!brightness-110",
             fixedXl,
             fixedLg,
             fixedMd,
