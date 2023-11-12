@@ -2,7 +2,7 @@
 
 import { getGraph } from "@/utils/Knowledge/Graph";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { ForceGraph2D } from "react-force-graph";
+import Graph from "react-graph-vis";
 
 const knowledge: {
   nodes: { id: string; group: number; color: string }[];
@@ -210,7 +210,7 @@ const knowledge: {
 };
 
 function KnowledgeMap() {
-  const ref = useRef<any>(null);
+  /*const ref = useRef<any>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ width: number; height: number }>({
     height: 0,
@@ -228,34 +228,31 @@ function KnowledgeMap() {
       height: document.documentElement.clientHeight * 0.8,
       width: wrapperRef.current?.clientWidth ?? 10,
     });
-  }, [wrapperRef]);
+  }, [wrapperRef]);*/
+
+  const nodes: { id: number; label: string; title: string; color: string }[] =
+    getGraph().nodes.map((i, idx) => ({
+      id: idx,
+      label: i.id,
+      title: i.id,
+      color: i.color,
+    }));
+  const links: { from: number; to: number }[] = getGraph().links.map(
+    (link) => ({
+      from: nodes.find((i) => i.label === link.target)?.id ?? 0,
+      to: nodes.find((i) => i.label === link.source)?.id ?? 0,
+    })
+  );
 
   return (
     <div
       className="2xl:w-2/3 lg:w-2/3 w-11/12 rounded-xl border-white border-2"
-      ref={wrapperRef}
+      //ref={wrapperRef}
     >
-      <ForceGraph2D
-        ref={ref}
-        height={size.height}
-        width={size.width}
-        graphData={getGraph()}
-        nodeCanvasObject={(node, ctx, globalScale) => {
-          const label = node.id;
-          const fontSize =
-            (12 / globalScale) *
-            (label.startsWith("Sebastian")
-              ? 1.5
-              : label.startsWith("!")
-              ? 1.2
-              : 1);
-          ctx.font = `${fontSize}px Sans-Serif`;
-
-          ctx.fillStyle = node.color;
-
-          ctx.textAlign = "center";
-          ctx.textBaseline = "middle";
-          ctx.fillText(label.replace("!", ""), node.x ?? 0, node.y ?? 0);
+      <Graph
+        graph={{
+          nodes: nodes,
+          edges: links,
         }}
       />
     </div>
