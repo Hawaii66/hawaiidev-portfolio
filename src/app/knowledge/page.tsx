@@ -5,6 +5,12 @@ import Category from "@/components/Knowledge/Category";
 import ListWrapper from "@/components/Knowledge/ListWrapper";
 import KnowledgeMap from "@/components/Knowledge/Map";
 import { categories } from "@/utils/Knowledge/Graph";
+import dynamic from "next/dynamic";
+
+const ListWrapperLazy = dynamic(
+  () => import("@/components/Knowledge/ListWrapper").then((cmp) => cmp.default),
+  { ssr: false }
+);
 
 function Page() {
   return (
@@ -12,7 +18,7 @@ function Page() {
       <FixedBackButton link="/" />
       <div className="flex flex-grow flex-col 2xl:flex-row justify-center items-center p-12 gap-4">
         <KnowledgeMap />
-        <ListWrapper>
+        <ListWrapperLazy>
           <div className="h-full flex flex-grow flex-col">
             <h1 className="text-5xl font-bold font-mono text-center pb-4">
               Knowledge
@@ -31,7 +37,7 @@ function Page() {
               Några av de saker jag kan
             </p>
           </div>
-        </ListWrapper>
+        </ListWrapperLazy>
       </div>
     </div>
   );
