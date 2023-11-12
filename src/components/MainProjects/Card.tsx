@@ -15,7 +15,7 @@ function Card({
   project: CardProps;
 }) {
   return (
-    <div className="aspect-card flex relative rounded-2xl overflow-hidden">
+    <div className=" flex relative rounded-2xl overflow-hidden">
       <div className="absolute flex justify-center items-center aspect-square h-full">
         <div
           className="flex-grow h-full -z-50  animate-spin-slow"
