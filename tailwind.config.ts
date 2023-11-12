@@ -19,6 +19,9 @@ module.exports = {
       aspectRatio: {
         card: "4/5",
       },
+      boxShadow: {
+        slot: "0px 0px 0.6rem white",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
