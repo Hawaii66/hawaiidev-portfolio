@@ -29,7 +29,7 @@ function About() {
                 content: (
                   <ul>
                     <li>
-                      <b>Driver's License:</b> B & AM driver's license
+                      <b>Drivers License:</b> B & AM drivers license
                     </li>
                     <li>
                       <b>Drone:</b> Allowed to fly drones up to 25kg
@@ -204,7 +204,7 @@ function About() {
                 content: (
                   <p>
                     I have sailed for multiple years in my local sailing club
-                    NYSS and today I'm one of 4 instructors instructing over 20
+                    NYSS and today Im one of 4 instructors instructing over 20
                     kids between 8-14 years. We have trainings each week and
                     summer camps.
                   </p>
