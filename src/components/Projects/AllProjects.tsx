@@ -14,7 +14,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/akroken/main.webp",
     link: "/projects/akroken",
     stack: ["Unity", "Artist"],
     title: "Åkroken",
@@ -22,7 +22,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/portfolio/main.png",
     link: "/projects/portfolio",
     stack: ["NextJS", "TailwindCSS"],
     title: "Portfölj",
@@ -30,7 +30,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/vendingmachine/main.jpg",
     link: "/projects/vendingmachine",
     stack: ["NextJS", "Arduino", "RaspberryPI", "Stripe"],
     title: "Vending Machine",
@@ -38,7 +38,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/lessonlagoon/main.png",
     link: "/projects/lessonlagoon",
     stack: ["NextJS", "ChatGPT", "Clerk", "Supabase"],
     title: "Lesson Lagoon",
@@ -46,7 +46,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/fusethis/main.webp",
     link: "/projects/fusethis",
     stack: ["NextJS"],
     title: "Fuse This",
@@ -54,7 +54,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/schoolsoftpro/main.png",
     link: "/projects/schoolsoftpro",
     stack: ["NextJS", "HTML-parser"],
     title: "Schoolsoft PRO",
@@ -62,7 +62,7 @@ const projects: CardProps[] = [
   {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta natus in nulla sapiente ea minus enim laborum nostrum fuga necessitatibus?",
-    image: "/enskildakiller/main.png",
+    image: "/verletsimulation/main.png",
     link: "/projects/verletsimulation",
     stack: ["Rust"],
     title: "Verlet Simulation",

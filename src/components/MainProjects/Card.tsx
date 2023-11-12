@@ -39,15 +39,18 @@ function Card({
           <h1 className="text-slate-800 font-bold tracking-wide text-4xl text-center">
             {title}
           </h1>
-          <img src={image} className="w-full rounded-2xl" />
+          <img
+            src={image}
+            className="w-full rounded-2xl aspect-video object-contain"
+          />
           <p className="text-md text-slate-800">- {description}</p>
           <div className="absolute z-50 bottom-4 right-4">
             <RedButton rotation="right" link={link} />
           </div>
         </div>
         <div>
-          <p>Stack:</p>
-          <div className="flex flex-row flex-wrap pr-12 gap-4">
+          <p className="font-bold">Stack:</p>
+          <div className="flex flex-row flex-wrap pr-12">
             {StackToIcons(stack).map((i) => i)}
           </div>
         </div>

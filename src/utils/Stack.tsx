@@ -4,7 +4,7 @@ const WithIcon = (
   extension: string = "original"
 ) => {
   return (
-    <span>
+    <span className="pr-2">
       <i className={`devicon-${icon}-${extension} mr-1`} />
       {tech}
     </span>
@@ -28,7 +28,7 @@ const TechWithIcon = (tech: string) => {
     case "Supabase":
       return WithIcon(tech, "postgresql", "plain");
     default:
-      return <span>{tech}</span>;
+      return <span className="pr-2">{tech}</span>;
   }
 };
 
