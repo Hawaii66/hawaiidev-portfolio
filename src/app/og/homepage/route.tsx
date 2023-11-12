@@ -1,5 +1,4 @@
 import { ImageResponse } from "@vercel/og";
-import { ChevronDown } from "lucide-react";
 
 export const GET = async () => {
   return new ImageResponse(
