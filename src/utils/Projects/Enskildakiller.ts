@@ -25,7 +25,7 @@ export const EnskildaKiller: Project = {
     },
     {
       description:
-        "My school has a game each autumn called Killer everyone at school gets assigned another person on school as their target which they have to kill. This websites shows each persons target, who and when they killed each person and which circle they currently are assigned to. You can also read up on the rules and concepts of the game. The statistics are updated automaticly once a kill is confirmed by both murderer and target",
+        "In the annual autumn event at my school known as Killer, participants are assigned specific targets within the school community to eliminate. This website serves as a central hub, displaying crucial information such as each participant's assigned target, a record of their kills, including the names of the individuals they have eliminated, and the current circle to which they belong. The concept of the game involves a circular structure of kills, where participant X eliminates another person, that person, in turn, eliminates someone else (Y), and the cycle continues. The website also provides comprehensive rules and guidelines for the game. Notably, the statistics are automatically updated once a kill is confirmed by both the murderer and their target.",
     },
     {
       header: "Admin",
