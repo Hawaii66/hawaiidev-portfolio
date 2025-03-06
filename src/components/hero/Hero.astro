@@ -1,0 +1,14 @@
+---
+import { MapPinHouse } from "lucide-astro";
+import NameAnimate from "./NameAnimate";
+---
+
+<div
+  class="flex flex-col flex-1 justify-center pl-24 h-full min-h-screen text-white"
+>
+  <NameAnimate client:load />
+  <h2 class="py-4 pl-8 font-semibold text-3xl text-green-500">@HawaiiDev</h2>
+  <p class="flex flex-row gap-1 pl-8 text-lg text-neutral-200">
+    <MapPinHouse /> Sweden Nyköping
+  </p>
+</div>
