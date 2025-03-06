@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/About/About";
+import { KnowledgePage } from "@/components/Knowledge/Page";
 import CardCarousell from "@/components/MainProjects/CardCarousell";
 import MainText from "@/components/MainText";
 import RedButton from "@/components/RedButton";
@@ -12,9 +13,9 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <div className="w-full relative min-h-screen grid place-items-center">
+      <div className="relative place-items-center grid w-full min-h-screen">
         <MainText />
-        <div className="w-full  absolute bottom-0 pb-16 flex justify-end items-center flex-col">
+        <div className="bottom-0 absolute flex flex-col justify-end items-center pb-16 w-full">
           <RedButton
             rotation="down"
             onClick={() =>
@@ -22,7 +23,7 @@ export default function Home() {
             }
           />
         </div>
-        <div className="absolute top-4 right-4 z-50 gap-4 flex flex-col">
+        <div className="top-4 right-4 z-50 absolute flex flex-col gap-4">
           <RedButton
             outline
             text="Projects"
@@ -38,9 +39,9 @@ export default function Home() {
         </div>
       </div>
       <img src="/wave.svg" className="w-full" />
-      <div className="min-h-screen w-full relative" ref={mainProjectsRef}>
+      <div className="relative w-full min-h-screen" ref={mainProjectsRef}>
         <div
-          className="w-full -z-10 h-full absolute"
+          className="-z-10 absolute w-full h-full"
           style={{
             maskImage: "radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0) 50%)",
             WebkitMaskImage:
@@ -48,10 +49,10 @@ export default function Home() {
             backgroundImage: "url(hex.svg)",
           }}
         />
-        <div className="min-h-screen w-full h-full flex justify-center items-center">
+        <div className="flex justify-center items-center w-full h-full min-h-screen">
           <CardCarousell />
         </div>
-        <div className="w-full absolute bottom-0 pb-16 flex justify-end items-center flex-col">
+        <div className="bottom-0 absolute flex flex-col justify-end items-center pb-16 w-full">
           <RedButton
             rotation="down"
             onClick={() =>
@@ -61,7 +62,9 @@ export default function Home() {
         </div>
       </div>
       <img src="/wave.svg" className="w-full" />
-      <div className="min-h-screen w-full" ref={aboutRef}>
+      <KnowledgePage showHomeLink={false} />
+      <img src="/wave.svg" className="w-full" />
+      <div className="w-full min-h-screen" ref={aboutRef}>
         <About />
       </div>
     </div>

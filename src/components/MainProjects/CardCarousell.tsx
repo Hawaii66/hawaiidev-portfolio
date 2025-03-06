@@ -5,6 +5,22 @@ import { ChevronRight } from "lucide-react";
 
 const MainProjects: CardProps[] = [
   {
+    title: "Reelly",
+    description:
+      "Reelly is your mobile app for engaging, bite-sized learning. Dive into short-form articles that blend captivating images with insightful text, focusing on knowledge and trivia tailored just for you",
+    image: "/reelly/main.png",
+    stack: [
+      "React Native",
+      "Expo",
+      "Supabase",
+      "NextJS",
+      "Python",
+      "Generative AI",
+    ],
+    link: "/projects/reelly",
+    hasLink: true,
+  },
+  {
     title: "Enskilda Killer",
     description:
       "Developed a website for my school using NextJS and Supabase. Each user can log in using Clerk and se their 'target'. Admins can log in and se the whole circle",
@@ -22,24 +38,15 @@ const MainProjects: CardProps[] = [
     link: "/projects/akroken",
     hasLink: true,
   },
-  {
-    title: "Portfölj",
-    description:
-      "The portfolio you are currenly watching, development time: 2 days. I wanted to summarize some of the things I have worked on in one place",
-    image: "/portfolio/main.png",
-    stack: ["NextJS", "TailwindCSS"],
-    link: "/projects/portfolio",
-    hasLink: true,
-  },
 ];
 
 function CardCarousell() {
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-4">
-      <h2 className="text-3xl text-white text-center font-bold font-mono">
+    <div className="flex flex-col justify-center items-center gap-4 w-full">
+      <h2 className="font-mono font-bold text-white text-3xl text-center">
         Main Projects
       </h2>
-      <div className="w-2/3 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-8">
+      <div className="gap-8 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 w-2/3">
         {MainProjects.map((project) => (
           <Card key={project.title} project={project} />
         ))}

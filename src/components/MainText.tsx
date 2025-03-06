@@ -14,13 +14,13 @@ function MainText() {
   const animateInfo = async () => {
     await new TextModifyBuilder(setInfo)
       .WriteText("Nyköping Sweden", { delay: 100 })
-      .AppendText(" 18 years", { delay: 50 })
+      .AppendText(" 20 years", { delay: 50 })
       .Animate();
   };
 
   const animateHeader = async () => {
     await new TextModifyBuilder(setHeader)
-      .Sleep(500)
+      .Sleep(300)
       .DeleteText("Hello World")
       .Action(animateHandle)
       .Sleep(500)
@@ -34,7 +34,7 @@ function MainText() {
     animateHeader();
   }, []);
   return (
-    <main className="flex flex-col w-1/2 gap-4">
+    <main className="flex flex-col gap-4 w-1/2">
       <h1
         className={`${
           header === "" ? "opacity-0" : "opacity-100"

@@ -2,11 +2,11 @@ import React from "react";
 
 function AboutHeader() {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <h1 className="text-lg font-sans text-white font-bold">
+    <div className="flex flex-col justify-center items-center w-full">
+      <h1 className="font-sans font-bold text-white text-lg">
         Sebastian Ahlman
       </h1>
-      <h2>18 years Sweden Nyköping</h2>
+      <h2>20 years Sweden Nyköping</h2>
     </div>
   );
 }

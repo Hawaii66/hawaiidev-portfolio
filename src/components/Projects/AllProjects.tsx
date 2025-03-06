@@ -5,6 +5,22 @@ import FixedBackButton from "../FixedBackButton";
 
 const projects: CardProps[] = [
   {
+    title: "Reelly",
+    description:
+      "Reelly is your mobile app for engaging, bite-sized learning. Dive into short-form articles that blend captivating images with insightful text, focusing on knowledge and trivia tailored just for you",
+    image: "/reelly/main.png",
+    stack: [
+      "React Native",
+      "Expo",
+      "Supabase",
+      "NextJS",
+      "Python",
+      "Generative AI",
+    ],
+    link: "/projects/reelly",
+    hasLink: true,
+  },
+  {
     description:
       "Developed a website for my school using NextJS and Supabase. Each user can log in using Clerk and se their 'target'. Admins can log in and se the whole circle",
     image: "/enskildakiller/main.png",
@@ -14,6 +30,13 @@ const projects: CardProps[] = [
     hasLink: true,
   },
   {
+    description: "Comming soon",
+    image: null,
+    stack: ["React Native", "Expo", "Posthog", "Go", "Astro", "PostgreSQL"],
+    title: "Veckans 200",
+    link: "/projects/veckans200",
+  },
+  {
     description:
       "One of projects I worked on at LearningWell where I developed an AR app togehter with a 3D artist to bring a famous historical place in Nyköping to life",
     image: "/akroken/main.webp",
@@ -21,6 +44,17 @@ const projects: CardProps[] = [
     stack: ["Unity", "Artist"],
     title: "Åkroken",
     hasLink: true,
+  },
+  {
+    title: "Slime Mold Simultion",
+    description:
+      "This Go project simulates the movement of slime molds on a 2D grid. The slime mold's behavior is influenced by various parameters such as speed, trail dynamics, and random forces. The project also supports customization of the color gradient used to visualize the trails left behind by the slimes.",
+
+    image: "/slimemold/main.png",
+    hasLink: false,
+    stack: ["Go", "Ebiten"],
+    github: "https://github.com/Hawaii66/slime-mold-simulation",
+    link: "/projects/slimemold",
   },
   {
     description:
@@ -42,33 +76,6 @@ const projects: CardProps[] = [
   },
   {
     description:
-      "A website for sharing and studying all things related to school. The website will integrated with AI and have interactive playgrounds for learning.",
-    image: "/lessonlagoon/main.png",
-    link: "/projects/lessonlagoon",
-    stack: ["NextJS", "ChatGPT", "Clerk", "Supabase"],
-    title: "Lesson Lagoon",
-    github: "https://github.com/Hawaii66/lesson-lagoon",
-  },
-  {
-    description:
-      "A SASS for generating AppStore image gallerys with images spanning multiple images. In early stages of development",
-    image: "/fusethis/main.webp",
-    link: "/projects/fusethis",
-    stack: ["NextJS"],
-    title: "Fuse This",
-    github: "https://github.com/Hawaii66/fuse-this",
-  },
-  {
-    description:
-      "I got tired of using my schools default time table renderer, so I buildt my own. Will build out the website with more things I'm frustrated with",
-    image: "/schoolsoftpro/main.png",
-    link: "/projects/schoolsoftpro",
-    stack: ["NextJS", "HTML-parser"],
-    title: "Schoolsoft PRO",
-    github: "https://github.com/Hawaii66/schoolsoft-pro",
-  },
-  {
-    description:
       "Learned Rust and the discrete Verlet simulation for simulating balls in the Bevy 2D framework",
     image: "/verletsimulation/main.png",
     link: "/projects/verletsimulation",
@@ -80,10 +87,10 @@ const projects: CardProps[] = [
 
 function AllProjects() {
   return (
-    <div className="pt-12 flex flex-col justify-center items-center gap-8">
+    <div className="flex flex-col justify-center items-center gap-8 pt-12">
       <FixedBackButton link="/" />
       <ProjectHeader />
-      <div className="w-2/3 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-8">
+      <div className="gap-8 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 w-2/3">
         {projects.map((project) => (
           <Card project={project} key={project.title} />
         ))}

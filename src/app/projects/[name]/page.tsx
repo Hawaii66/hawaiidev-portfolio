@@ -4,6 +4,7 @@ import Project from "@/components/Projects/Sections/Project";
 import { Akroken } from "@/utils/Projects/Akroken";
 import { EnskildaKiller } from "@/utils/Projects/Enskildakiller";
 import { Portfolio } from "@/utils/Projects/Portfolio";
+import { Reelly } from "@/utils/Projects/Reelly";
 import React from "react";
 
 function Page({ params }: { params: { name: string } }) {
@@ -15,6 +16,8 @@ function Page({ params }: { params: { name: string } }) {
         return <Project project={Akroken} />;
       case "portfolio":
         return <Project project={Portfolio} />;
+      case "reelly":
+        return <Project project={Reelly} />;
     }
   };
 
@@ -31,7 +34,7 @@ function Page({ params }: { params: { name: string } }) {
 }
 
 export async function generateStaticParams() {
-  return ["enskildakiller", "akroken"];
+  return ["enskildakiller", "akroken", "portfolio", "reelly"];
 }
 
 export default Page;

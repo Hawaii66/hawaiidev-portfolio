@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export type CardProps = {
   title: string;
-  image: string;
+  image: string | null;
   description: string;
   stack: string[];
   link: string;
@@ -21,10 +21,10 @@ function Card({
   project: CardProps;
 }) {
   return (
-    <div className=" flex relative rounded-2xl overflow-hidden">
-      <div className="absolute flex justify-center items-center aspect-square h-full">
+    <div className="relative flex rounded-2xl overflow-hidden">
+      <div className="absolute flex justify-center items-center h-full aspect-square">
         <div
-          className="flex-grow h-full -z-50  animate-spin-slow"
+          className="-z-50 flex-grow h-full animate-spin-slow"
           style={{
             scale: 10 / 4,
             animationDelay: `${-Math.random() * 10}s`,
@@ -36,24 +36,26 @@ function Card({
         tiltReverse
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
-        className="m-4 p-4 shadow-lg z-50 shadow-black flex flex-col gap-4 bg-white relative flex-grow rounded-2xl text-black"
+        className="z-50 relative flex flex-col flex-grow gap-4 bg-white shadow-black shadow-lg m-4 p-4 rounded-2xl text-black"
       >
-        <div className="flex-grow flex flex-col gap-4">
-          <h1 className="text-slate-800 font-bold tracking-wide text-4xl text-center">
+        <div className="flex flex-col flex-grow gap-4">
+          <h1 className="font-bold text-slate-800 text-4xl text-center tracking-wide">
             {title}
           </h1>
-          <img
-            src={image}
-            className="w-full rounded-2xl aspect-video object-contain"
-          />
-          <p className="text-md text-slate-800">- {description}</p>
+          {image && (
+            <img
+              src={image}
+              className="rounded-2xl w-full object-contain aspect-video"
+            />
+          )}
+          <p className="text-slate-800 text-lg">- {description}</p>
           {hasLink && (
-            <div className="absolute z-50 bottom-4 right-4">
+            <div className="right-4 bottom-4 z-50 absolute">
               <RedButton rotation="right" link={link} />
             </div>
           )}
           {github && (
-            <div>
+            <div className="text-lg">
               <p className="font-bold">Github:</p>
               <Link href={github} target="_blank" className="text-blue-500">
                 {github}
@@ -61,7 +63,7 @@ function Card({
             </div>
           )}
         </div>
-        <div>
+        <div className="text-lg">
           <p className="font-bold">Stack:</p>
           <div className="flex flex-row flex-wrap pr-12">
             {StackToIcons(stack).map((i) => i)}
